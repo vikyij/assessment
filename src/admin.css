@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin {
+  font-family: 'Poppins', sans-serif;
+  margin-right: 15px;
+  overflow-x: hidden;
+}
+
+.admin-row {
+  margin-right: 0px;
+}
+
+.admin-text {
+  margin-top: 50px;
+  padding: 120px;
+}
+
+.admin-p {
+  text-align: left;
+  font-size: 13px;
+  font-weight: lighter;
+  letter-spacing: 0.23px;
+  color: #ffffff;
+}
+
+.admin-h3 {
+  font-size: 28px;
+  font-weight: lighter;
+  letter-spacing: -0.05px;
+  color: #ffffff;
+}
+
+.admin-span {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -0.04px;
+  color: #ffffff;
+}
+
+.input-group {
+  background: #3c3f54 0% 0% no-repeat padding-box;
+  border: 1px solid #3c3f54;
+  border-radius: 15px;
+  color: #ffffff;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  padding: 10px;
+  opacity: 1;
+}
+
+.input-group-addon {
+  margin-left: 20px;
+  margin-top: 7px;
+  margin-right: 20px;
+}
+
+.grp2 {
+  background: #eaedef 0% 0% no-repeat;
+  border: 1px solid #eaedef;
+  border-radius: 50px;
+  padding: 0px;
+  max-width: 280px;
+  margin-right: 18px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.form-control-plaintext {
+  background: #3c3f54 0% 0% no-repeat;
+  border: 1px solid #3c3f54;
+  border-radius: 15px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.form-control-plaintext:focus {
+  background: #3c3f54 0% 0% no-repeat;
+  border: 1px solid #3c3f54;
+}
+
+.my-select {
+  background-color: #eaedef;
+  border: 1px solid #eaedef;
+  border-radius: 50px;
+  max-width: 120px;
+  margin-right: 18px;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: bold;
+}
+
+.search2 {
+  background-color: #eaedef;
+  border: 1px solid #eaedef;
+  font-weight: bold;
+  color: #333;
+}
+
+.search2:focus {
+  background: #eaedef 0% 0% no-repeat;
+  border: 1px solid #eaedef;
+}
+
+.all-users {
+  background: #f935a9 0% 0% no-repeat;
+  box-shadow: 0px 3px 30px #00000029;
+  border-radius: 15px;
+  padding: 15px 28px;
+  font-size: 33px;
+  margin-right: 27px;
+  margin-left: 15px;
+}
+
+.m-user {
+  background: #30bbb5 0% 0% no-repeat;
+  border-radius: 15px;
+  padding: 15px 27px;
+  font-size: 30px;
+  margin-right: 27px;
+}
+
+.f-user {
+  background: #7946c1 0% 0% no-repeat;
+  border-radius: 15px;
+  padding: 15px 27px;
+  font-size: 30px;
+  margin-right: 27px;
+}
+
+.admin-user {
+  text-align: center;
+  font-size: 12px;
+  font-weight: light;
+  letter-spacing: 0.23px;
+  color: #ffffff;
+  margin-top: 7px;
+}
+
+.buttons {
+  margin-top: 25px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.b1 {
+  margin-left: 0;
+}
+
+.svg1 {
+  color: #ffffff;
+}
+
+.svg2 {
+  color: #babdd1;
+}
+
+.my-svg {
+  color: #000000;
+}
+
+.users-db {
+  background: #f7f7ff 0% 0% no-repeat;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 50px;
+  color: #000000;
+}
+
+.toggle-users {
+  font-size: 28px;
+  color: #262a41;
+  margin-bottom: 0;
+}
+
+.filters {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.toggle {
+  font-size: 12px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #30bbb5;
+  border-color: #30bbb5;
+}
+
+
+.grp-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0;
+}
+
+.download-btn {
+  background: #7946c1 0% 0% no-repeat;
+  color: #ffffff;
+  font: 15px bold;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 35px;
+  padding: 10px;
+  opacity: 1;
+}
+
+.download-svg {
+  margin-right: 5px;
+}
+
+.pagination {
+  float: right;
+}
+
+.pag1 {
+  margin-right: 5px;
+  background-color: #e2e2ea;
+}
+
+.pag2 {
+  background-color: #262a41;
+  box-shadow: 4px 5px 20px #0000001a;
+}
+
+.pag2:hover {
+  background-color: #262a41;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 11px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 11px;
+}
+
+.gender-button {
+  transition: all 0.5s ease-in-out;
+}
+
+.gender-button.gender-active {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 550px) {
+ .admin {
+   margin-right: 0px;
+ }
+
+ .admin-text {
+   margin-top: 20px; 
+   padding: 50px; 
+}
+
+.buttons {
+  margin-right: 20px;
+}
+
+ .all-users {
+   padding: 13px 15px;
+   font-size: 20px;
+ }
+
+ .m-user {
+  padding: 13px 15px;
+  font-size: 20px;
+ }
+
+ .f-user{
+  padding: 13px 15px;
+  font-size: 20px;
+ }
+
+ .users-db {
+   border-radius: 0px;
+   border-top-right-radius: 50px;
+   border-top-left-radius: 50px;
+   margin: 0px 15px;
+   padding: 20px;
+ }
+}

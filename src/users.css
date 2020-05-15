@@ -1,0 +1,61 @@
+.user1 {
+    background: #fcfcff 0% 0% no-repeat;
+    box-shadow: 10px 10px 40px #0000000d;
+    border-radius: 12px;
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-top: 30px;
+  }
+  
+  .my-img {
+    max-width: 20%;
+    padding-right: 0px;
+  }
+  
+  .my-user-data {
+    max-width: 80%;
+    padding-right: 0px;
+  }
+  
+  .my-logo {
+    border: 5px solid #75d6d1;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .user-name {
+    text-align: left;
+    font: 21px Bold;
+    letter-spacing: -0.02px;
+    color: #262a41;
+    margin-bottom: 7px;
+  }
+  
+  .user-address {
+    text-align: left;
+    font: Italic 15px bold;
+    letter-spacing: -0.02px;
+    color: #262a41;
+    opacity: 0.69;
+    margin-bottom: 0;
+  }
+  
+  .user-email {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: -0.02px;
+    color: #262a41;
+    opacity: 0.9;
+    letter-spacing: -0.02px;
+    margin-right: 22px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .arrow-btn {
+    background: #30bbb5 0% 0% no-repeat;
+    box-shadow: 2px 15px 30px #30bbb574;
+    border-radius: 13px;
+    margin-bottom: 20px;
+  }

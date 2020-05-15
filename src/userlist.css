@@ -1,0 +1,100 @@
+.ul {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 70px;
+}
+
+.ul-p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font: 14px bold;
+  color: #262a41;
+  opacity: 0.52;
+}
+
+.ul-svg {
+  color: #30bbb5;
+  margin-right: 8px;
+  font-size: medium;
+}
+
+.ul-logo {
+  border: 5px solid #75d6d1;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.ul-heading {
+  text-align: left;
+  font: 23px Bold;
+  letter-spacing: -0.02px;
+  color: #262a41;
+  opacity: 1;
+}
+
+.span {
+  font-weight: lighter;
+  display: inline;
+}
+
+.ul-address {
+  color: #262A41;
+  opacity: 0.69;
+  font-size: 14px;
+}
+
+.ul-email {
+  background-color: #eaedef;
+  padding: 8px;
+  text-align: center;
+  color: #262a41;
+  box-shadow: 10px 10px 40px #0000000d;
+  border-radius: 18px;
+  opacity: 0.52;
+  font-size: 13px;
+}
+
+.ul-register {
+  background-color: #ff9ce6;
+  border-radius: 18px;
+  padding: 10px;
+  font: 14px bold;
+  letter-spacing: -0.18px;
+  color: #262a41;
+  text-align: center;
+  width: 300px;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.ul-phone {
+  color: #262A41;
+  opacity: 0.52;
+  font-size: 12px;
+}
+
+.ul-svg2 {
+  margin-right: 5px;
+  color: #babdd1;
+}
+
+.btn:disabled {
+  cursor: auto;
+}
+
+.disabled {
+  opacity: 0.65;
+  cursor: auto;
+}
+
+.download-btn:hover {
+  color: #ffffff;
+}
+
+.page-link {
+  border-radius: 11px;
+}
+
+.page-link:disabled {
+  color: red;
+}
