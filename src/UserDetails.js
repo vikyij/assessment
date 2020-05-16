@@ -3,16 +3,14 @@ import { FaRegEnvelope } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaArrowLeft } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+
 
 import './userdetails.css'
 
 function UserDetails({ user, returnToList }) {
     return (
         <div className='user-list'>
-            <button type='button' className='btn ul-p' onClick={returnToList}><FaArrowLeft className='ul-svg' /> RESULTS</button>
+            <button type='button' className='btn ul-p' onClick={()=>returnToList()}><FaArrowLeft className='ul-svg' /> RESULTS</button>
             <div className='row ul'>
                 <div className='ul-img'>
                     <img src={user.picture.large} className='ul-logo' alt={user.name.first} />
@@ -31,11 +29,6 @@ function UserDetails({ user, returnToList }) {
 
             </div>
         </div>
-        <button type='button' className='btn download-btn' disabled= {true}><FaCloudDownloadAlt className='download-svg'/> Download results</button>
-        <ul class="pagination">
-            <li class="page-item page-link pag1 disabled"><MdKeyboardArrowLeft className='my-svg'/></li>
-            <li class="page-item page-link pag2 disabled"><MdKeyboardArrowRight className='svg1' /></li>
-        </ul>
         </div>
     )
 
