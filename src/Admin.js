@@ -18,6 +18,7 @@ const initialState = {
   nationality: '',
   showCountry: false,
   seed: 'Emerald',
+  uname: '',
   showingUserDetail: false,
 };
 
@@ -44,6 +45,12 @@ function profileReducer(state = initialState, action) {
       const nationality = action.payload;
 
       return { ...state, nationality };
+    }
+
+    case 'update/uname': {
+      const uname = action.payload;
+
+      return { ...state, uname }
     }
 
     case 'view/show-country': {
@@ -81,7 +88,7 @@ function profileReducer(state = initialState, action) {
 function Admin() {
   const [state, dispatch] = useReducer(profileReducer, initialState);
 
-  const { gender, page, nationality, seed, showCountry, showingUserDetail} = state;
+  const { gender, page, nationality, seed, showCountry, showingUserDetail, uname } = state;
 
   const { data, loading, absolutePath } = useGet({
     path: 'https://randomuser.me/api/',
@@ -94,6 +101,7 @@ function Admin() {
       results: 3,
     },
   });
+
   return (
     <div className="admin">
       <div className="row admin-row">
@@ -111,15 +119,20 @@ function Admin() {
             <input
               type="text"
               name="search"
+              value={uname}
               className="form-control-plaintext"
               placeholder="Find a user"
+              onChange={(e) => dispatch({
+                type: 'update/uname',
+                payload: e.target.value
+              })}
             />
           </div>
-     <GenderFilters 
-         gender={gender} 
-         onGenderChange={(gender) => 
-                         dispatch({type: 'update/gender', payload: gender})}/>
-          
+          <GenderFilters
+            gender={gender}
+            onGenderChange={(gender) =>
+              dispatch({ type: 'update/gender', payload: gender })} />
+
         </div>
 
         <div className="col-sm-6 users-db">
@@ -128,32 +141,43 @@ function Admin() {
               <span className="text-capitalize">{gender || 'All'}</span> Users
             </b>
           </p>
-          
-          <NationFilter 
-              onNationChange ={(country) => dispatch({
-                          type: 'update/nationality',
-                          payload: country
-              })}
-              onCountryChecked = {(checked) => dispatch({
-                            type: 'view/show-country',
-                            payload: checked
-              })}
-              />
 
-          <Users 
-                users={data} 
-                loading={loading} 
-                showCountry={showCountry} 
-                onShowingUserDetail={(showingDetail) =>
-                 dispatch({ type: 'view/showing-detail', payload: showingDetail })} />
+          <NationFilter
+            value={uname}
+            filterNames={(name) => dispatch({
+              type: 'update/uname',
+              payload: name
+            })}
+            onNationChange={(country) => dispatch({
+              type: 'update/nationality',
+              payload: country
+            })}
+            onCountryChecked={(checked) => dispatch({
+              type: 'view/show-country',
+              payload: checked
+            })}
+          />
 
-          <Download path={absolutePath} disable={showingUserDetail}/>
-     
-            <Pagination
-              page={page}
-              previous={() => dispatch({ type: 'page/previous' })}
-              next={() => dispatch({ type: 'page/next' })}
-            />
+          {uname ? <Users
+            users={data.filter(item => item.name.first.toLowerCase().includes(uname.toLowerCase()) ||
+              item.name.last.toLowerCase().includes(uname.toLowerCase()))} loading={loading}
+            showCountry={showCountry}
+            onShowingUserDetail={(showingDetail) =>
+              dispatch({ type: 'view/showing-detail', payload: showingDetail })} /> :
+            <Users
+              users={data}
+              loading={loading}
+              showCountry={showCountry}
+              onShowingUserDetail={(showingDetail) =>
+                dispatch({ type: 'view/showing-detail', payload: showingDetail })} />}
+
+          <Download path={absolutePath} disable={showingUserDetail} />
+
+          <Pagination
+            page={page}
+            previous={() => dispatch({ type: 'page/previous' })}
+            next={() => dispatch({ type: 'page/next' })}
+          />
 
         </div>
       </div>
