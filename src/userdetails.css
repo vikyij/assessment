@@ -98,3 +98,46 @@
 .page-link:disabled {
   color: red;
 }
+
+@media screen and (max-width: 550px) {
+  .ul {
+    padding: 20px;
+  }
+  .ul {
+    display: block;  
+  }
+
+  .ul-img {
+    text-align: center;
+    
+  }
+  
+  .ul-heading {
+    text-align: center;
+  }
+
+  .ul-details {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .ul {
+    display: block;  
+    padding: 20px;
+  }
+
+  .ul-img {
+    text-align: center;
+    
+  }
+
+  .ul-heading {
+    text-align: center;
+  }
+
+  .ul-details {
+    padding-top: 20px;
+  }
+}

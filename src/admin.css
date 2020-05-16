@@ -253,8 +253,12 @@
 
 @media screen and (max-width: 550px) {
  .admin {
-   margin-right: 0px;
+   margin-right: 0px;  
  }
+
+ .admin-row {
+  margin-right: -15px;
+}
 
  .admin-text {
    margin-top: 20px; 
@@ -287,4 +291,131 @@
    margin: 0px 15px;
    padding: 20px;
  }
+
+ .input-group-addon {
+  margin-left: 2px;
+  margin-right: 0px;
+}
+
+.grp2 {
+  margin-right: 5px;
+}
+
+.my-select{
+  margin-right: 5px;
+}
+
+.user1{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.my-img {
+  max-width: 20%;
+ 
+}
+
+.my-user-data {
+  max-width: 70%;
+  margin-left: 18px;
+}
+
+.my-logo {
+  width: 70px;
+}
+
+.user-address {
+  font: Italic 12px bold;  
+}
+
+.grp-row {
+  display: block;
+}
+
+.user-email {
+  font-size: 10px;
+}
+
+.arrow-btn {
+  margin-bottom: 0px;
+  padding: 5px;
+  float: right;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .admin-text {
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.buttons {
+  margin-right: 20px;
+}
+
+ .all-users {
+   padding: 13px 15px;
+   font-size: 20px;
+   margin-right: 10px;
+   margin-left: 10px
+ }
+
+ .m-user {
+  padding: 13px 15px;
+  font-size: 20px;
+  margin-right: 10px;
+
+ }
+
+ .f-user{
+  padding: 13px 15px;
+  font-size: 20px;
+  margin-right: 0px;
+
+ }
+
+ .users-db {
+  padding: 10px; 
+  padding-top: 30px
+}
+
+.input-group-addon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.my-img {
+  max-width: 20%;
+ 
+}
+
+.my-user-data {
+  max-width: 70%;
+  margin-left: 18px;
+}
+
+.my-logo {
+  width: 70px;
+}
+
+.user-address {
+  font: Italic 12px bold;  
+}
+
+.grp-row {
+  display: block;
+}
+
+.user-email {
+  font-size: 10px;
+}
+
+.arrow-btn {
+  margin-bottom: 0px;
+  padding: 5px;
+  float: right;
+}
+
 }

@@ -7,13 +7,12 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-import './userlist.css'
+import './userdetails.css'
 
-function UserList({ user, handleClick }) {
-
+function UserDetails({ user, returnToList }) {
     return (
         <div className='user-list'>
-            <button type='button' className='btn ul-p' onClick={() => handleClick()}><FaArrowLeft className='ul-svg' /> RESULTS</button>
+            <button type='button' className='btn ul-p' onClick={returnToList}><FaArrowLeft className='ul-svg' /> RESULTS</button>
             <div className='row ul'>
                 <div className='ul-img'>
                     <img src={user.picture.large} className='ul-logo' alt={user.name.first} />
@@ -42,4 +41,4 @@ function UserList({ user, handleClick }) {
 
 
 }
-export default UserList
+export default UserDetails

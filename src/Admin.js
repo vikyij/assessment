@@ -4,23 +4,23 @@ import { FaSearch } from 'react-icons/fa';
 import { FaUsers } from 'react-icons/fa';
 import { FaUserTie } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
-import { FaCloudDownloadAlt } from 'react-icons/fa';
-import { MdKeyboardArrowLeft } from 'react-icons/md';
-import { MdKeyboardArrowRight } from 'react-icons/md';
 import cc from 'classcat';
 
 import Users from './Users';
+import Pagination from './Pagination'
+import Download from './Download'
+
 
 import './admin.css';
 
 const initialState = {
   gender: '',
-  name: '',
   page: 1,
   nationality: '',
   showCountry: false,
   seed: 'Emerald',
 };
+
 
 function profileReducer(state = initialState, action) {
   switch (action.type) {
@@ -44,12 +44,6 @@ function profileReducer(state = initialState, action) {
       const nationality = action.payload;
 
       return { ...state, nationality };
-    }
-
-    case 'update/name': {
-      const name = action.payload;
-
-      return { ...state, name };
     }
 
     case 'view/show-country': {
@@ -81,7 +75,7 @@ function profileReducer(state = initialState, action) {
 function Admin() {
   const [state, dispatch] = useReducer(profileReducer, initialState);
 
-  const { gender, page, nationality, seed, showCountry, name } = state;
+  const { gender, page, nationality, seed, showCountry } = state;
 
   const { data, loading, absolutePath } = useGet({
     path: 'https://randomuser.me/api/',
@@ -92,12 +86,8 @@ function Admin() {
       page: page,
       seed: seed,
       results: 3,
-      name
     },
   });
-
-  // 'https://randomuser.me/api/?inc=gender,name,nat,location,email,phone,picture,registered?page=1&results=3&seed=a',
-
   return (
     <div className="admin">
       <div className="row admin-row">
@@ -197,14 +187,6 @@ function Admin() {
                 name="search"
                 className="form-control-plaintext search2"
                 placeholder="Find in list"
-                id="name"
-                value={name}
-                onChange={(e) =>
-                  dispatch({
-                    type: 'update/name',
-                    payload: e.target.value,
-                  })
-                }
               />
             </div>
 
@@ -261,35 +243,14 @@ function Admin() {
           </div>
 
           <Users users={data} loading={loading} showCountry={showCountry} />
+          <Download path={absolutePath} />
+            <Pagination
+              page={page}
+              previous={() => dispatch({ type: 'page/previous' })}
+              next={() => dispatch({ type: 'page/next' })}
+            />
+         
 
-          <div className="paging">
-            <a
-              type="button"
-              className="btn download-btn"
-              href={`${absolutePath}&format=csv&dl`}
-            >
-              <FaCloudDownloadAlt className="download-svg" /> Download results
-            </a>
-            <ul className="pagination">
-              <li className="page-item">
-                <button
-                  className="page-link pag1"
-                  disabled={page === 1}
-                  onClick={() => dispatch({ type: 'page/previous' })}
-                >
-                  <MdKeyboardArrowLeft className="my-svg" />
-                </button>
-              </li>
-              <li className="page-item">
-                <button
-                  className="page-link pag2"
-                  onClick={() => dispatch({ type: 'page/next' })}
-                >
-                  <MdKeyboardArrowRight className="svg1" />
-                </button>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
