@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaSearch } from 'react-icons/fa';
 
+  /* receives props fro Admin Component.
+   Contains filter by name ,country and toggle country.*/
 
 function NationFilter({ onNationChange, onCountryChecked, value, filterNames }) {
   return (
@@ -28,7 +30,7 @@ function NationFilter({ onNationChange, onCountryChecked, value, filterNames }) 
 
           }
         >
-          <option value="">All</option>
+          <option value="">Country</option>
           <option value="AU">AU</option>
           <option value="BR">BR</option>
           <option value="CA">CA</option>

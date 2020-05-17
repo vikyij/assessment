@@ -4,6 +4,9 @@ import { FaUserTie } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import cc from 'classcat';
 
+
+/*renders users based on gender.*/
+
 function GenderFilters({gender, onGenderChange}) {
     return(
         <>

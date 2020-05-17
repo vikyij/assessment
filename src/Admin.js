@@ -12,6 +12,7 @@ import NationFilter from './NationFilter';
 
 import './admin.css';
 
+//initial states for the useReducer
 const initialState = {
   gender: '',
   page: 1,
@@ -22,7 +23,7 @@ const initialState = {
   showingUserDetail: false,
 };
 
-
+// Reducer function
 function profileReducer(state = initialState, action) {
   switch (action.type) {
     case 'update/gender': {
@@ -90,6 +91,7 @@ function Admin() {
 
   const { gender, page, nationality, seed, showCountry, showingUserDetail, uname } = state;
 
+  //getting data from restful Api
   const { data, loading, absolutePath } = useGet({
     path: 'https://randomuser.me/api/',
     resolve: (users) => users && users.results,
@@ -116,6 +118,7 @@ function Admin() {
             <span className="input-group-addon">
               <FaSearch />
             </span>
+            {/* update the uname state with user input*/}
             <input
               type="text"
               name="search"
@@ -128,6 +131,10 @@ function Admin() {
               })}
             />
           </div>
+
+          {/* render GenderFilters component passing the gender props and updating the gender state.
+             this queries the api based on gender
+          */}
           <GenderFilters
             gender={gender}
             onGenderChange={(gender) =>
@@ -142,6 +149,7 @@ function Admin() {
             </b>
           </p>
 
+         {/* renders NationFilter Component that contains the filter by name ,country and toggle country.*/}
           <NationFilter
             value={uname}
             filterNames={(name) => dispatch({
@@ -158,9 +166,11 @@ function Admin() {
             })}
           />
 
+         {/* conditionally renders Users component based on the values in the uname state*/}
           {uname ? <Users
             users={data.filter(item => item.name.first.toLowerCase().includes(uname.toLowerCase()) ||
-              item.name.last.toLowerCase().includes(uname.toLowerCase()))} loading={loading}
+              item.name.last.toLowerCase().includes(uname.toLowerCase()))}
+               loading={loading}
             showCountry={showCountry}
             onShowingUserDetail={(showingDetail) =>
               dispatch({ type: 'view/showing-detail', payload: showingDetail })} /> :
@@ -171,12 +181,17 @@ function Admin() {
               onShowingUserDetail={(showingDetail) =>
                 dispatch({ type: 'view/showing-detail', payload: showingDetail })} />}
 
+          {/* passes the absolutePath as a prop to the Download component to enable us download the users data. 
+             Also passes the showingUserDetail state to determine if the button would be disabled or not
+          */}
           <Download path={absolutePath} disable={showingUserDetail} />
-
+ 
+          {/* renders Pagination component with page, previous, next and showingUserDetails states sent as props*/}
           <Pagination
             page={page}
             previous={() => dispatch({ type: 'page/previous' })}
             next={() => dispatch({ type: 'page/next' })}
+            disable={showingUserDetail}
           />
 
         </div>

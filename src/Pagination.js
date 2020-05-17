@@ -3,8 +3,10 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 
+/* enables users to navigate to previous and next page and disble button as appropriate */
 
-function Pagination({ page, next, previous,disable }) {
+function Pagination({ next, previous, disable }) {
+  
   function handlePrevious() {
     if (disable) {
       return;
@@ -27,7 +29,7 @@ function Pagination({ page, next, previous,disable }) {
           <li className="page-item">
             <button
               className="page-link pag1"
-              disabled={page === 1 || disable}
+              disabled={disable}            
               onClick={handlePrevious}
             >
               <MdKeyboardArrowLeft className="my-svg" />

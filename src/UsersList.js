@@ -4,6 +4,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { FiArrowRight } from 'react-icons/fi';
 import './userslist.css'
 
+//receives props from Users components and render users 
 function UsersList({ users, showCountry, onUserSelected }) {
      
   

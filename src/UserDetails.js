@@ -7,6 +7,8 @@ import { MdPhoneIphone } from "react-icons/md";
 
 import './userdetails.css'
 
+//receives props from Users components and renders that particular user
+
 function UserDetails({ user, returnToList }) {
     return (
         <div className='user-list'>
