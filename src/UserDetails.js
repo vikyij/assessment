@@ -13,7 +13,7 @@ function UserDetails({ user, returnToList }) {
     return (
         <div className='user-list'>
             <button type='button' className='btn ul-p' onClick={()=>returnToList()}><FaArrowLeft className='ul-svg' /> RESULTS</button>
-            <div className='row ul'>
+            <div className='row ul  animate__animated animate__fadeInUp'>
                 <div className='ul-img'>
                     <img src={user.picture.large} className='ul-logo' alt={user.name.first} />
                 </div>

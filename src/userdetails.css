@@ -7,7 +7,8 @@
 .ul-p {
   padding-top: 10px;
   padding-bottom: 10px;
-  font: 14px bold;
+  font-size: 14px;
+  font-weight:bold;
   color: #262a41;
   opacity: 0.52;
 }
@@ -38,6 +39,7 @@
 }
 
 .ul-address {
+  text-align: left;
   color: #262A41;
   opacity: 0.69;
   font-size: 14px;
@@ -46,12 +48,13 @@
 .ul-email {
   background-color: #eaedef;
   padding: 8px;
-  text-align: center;
+  text-align: left;
   color: #262a41;
   box-shadow: 10px 10px 40px #0000000d;
   border-radius: 18px;
   opacity: 0.52;
   font-size: 13px;
+  width: 255px;
 }
 
 .ul-register {
@@ -61,8 +64,8 @@
   font: 14px bold;
   letter-spacing: -0.18px;
   color: #262a41;
-  text-align: center;
-  width: 300px;
+  text-align: left;
+  width: 205px;
   opacity: 0.7;
   font-size: 12px;
 }

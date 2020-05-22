@@ -27,7 +27,7 @@ function Users({ users, loading, showCountry, onShowingUserDetail }) {
 
   return (
     <>
-      <p style={{ display: 'block', clear: 'both', textAlign: 'right' }}>
+      <p style={{ display: 'block', clear: 'both', textAlign: 'right' }} data-testid = "loading">
         {loading ? 'fetching new content...' : ' '}&nbsp;
       </p>
 

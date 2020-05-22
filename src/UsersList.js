@@ -35,20 +35,23 @@ return (
             }
             `}
           </p>
-          <div className="grp-row">
-            <p className="user-email">
+          <div className="row grp-row">
+            <p className="col-6 user-email">
               <FaRegEnvelope className="svg2" /> {user.email}
             </p>
-            <p className="user-email">
+            <p className="col-4 user-email">
               <FiPhoneCall className="svg2" /> {user.phone}
             </p>
-            <button
+            <div className='col-2'>
+              <button
               type="button"
               className="btn arrow-btn"
               onClick={() => onUserSelected(user)}
             >
-              <FiArrowRight className="svg1" />
+              <FiArrowRight className="btn-svg" />
             </button>
+            </div>
+            
           </div>
         </div>
       </div>

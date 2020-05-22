@@ -25,10 +25,9 @@ function NationFilter({ onNationChange, onCountryChecked, value, filterNames }) 
 
         <select
           className="form-control my-select"
+          data-testid="select-btn"
           name="country"
-          onChange={(e) => onNationChange(e.target.value)
-
-          }
+          onChange={(e) => onNationChange(e.target.value)}  
         >
           <option value="">Country</option>
           <option value="AU">AU</option>

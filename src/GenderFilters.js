@@ -23,6 +23,7 @@ function GenderFilters({gender, onGenderChange}) {
             >
               <button
                 type="button"
+                data-testid = "all-users"
                 className="btn all-users"
                 onClick={() => onGenderChange('')}
               >

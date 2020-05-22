@@ -26,7 +26,8 @@
   
   .user-name {
     text-align: left;
-    font: 21px Bold;
+    font-size: 21px;
+    font-weight: bold;
     letter-spacing: -0.02px;
     color: #262a41;
     margin-bottom: 7px;
@@ -34,28 +35,35 @@
   
   .user-address {
     text-align: left;
-    font: Italic 15px bold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
     letter-spacing: -0.02px;
     color: #262a41;
     opacity: 0.69;
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
   
   .user-email {
     text-align: left;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: -0.02px;
-    color: #262a41;
-    opacity: 0.9;
-    letter-spacing: -0.02px;
-    margin-right: 22px;
-    margin-bottom: 0;
-    margin-top: 0;
+    color: #262A41;
+    opacity: 0.52;
+    margin-top: 12+px;
   }
   
   .arrow-btn {
-    background: #30bbb5 0% 0% no-repeat;
+    background-color: #30bbb5;
     box-shadow: 2px 15px 30px #30bbb574;
-    border-radius: 13px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
+
+  .btn-svg {
+    color: #ffffff;
+    font-size: 21px;
+ 
+}
